@@ -62,13 +62,13 @@ public class PantallaGiroscopio extends AppCompatActivity implements SensorEvent
             if(sensorEvent.values[2] > 0.5f) { // anticlockwise
                 getWindow().getDecorView().setBackgroundColor(Color.BLUE);
             } else if(sensorEvent.values[2] < -0.5f) { // clockwise
-                getWindow().getDecorView().setBackgroundColor(Color.YELLOW);
+                getWindow().getDecorView().setBackgroundColor(Color.GRAY);
             }
 
             if(sensorEvent.values[0] > 0.5f) { // anticlockwise
-                getWindow().getDecorView().setBackgroundColor(Color.CYAN);
+                getWindow().getDecorView().setBackgroundColor(Color.DKGRAY);
             } else if(sensorEvent.values[0] < -0.5f) { // clockwise
-                getWindow().getDecorView().setBackgroundColor(Color.MAGENTA);
+                getWindow().getDecorView().setBackgroundColor(Color.RED);
             }
             ((TextView)findViewById(R.id.sensor)).append("X: "+x+ " Y: "+ y+ " Z: "+ z + "\n");
 
