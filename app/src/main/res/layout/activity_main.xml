@@ -7,12 +7,87 @@
     tools:context=".MainActivity">
 
     <TextView
+        android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginStart="38dp"
+        android:layout_marginTop="42dp"
+        android:layout_marginEnd="37dp"
+        android:fontFamily="serif"
+        android:text="Proyecto Final - Sensores"
+        android:textSize="28sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="241dp"
+        android:layout_height="230dp"
+        android:layout_marginStart="85dp"
+        android:layout_marginTop="27dp"
+        android:layout_marginEnd="85dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:srcCompat="@drawable/utp_logo_fondoblanco" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="125dp"
+        android:layout_marginTop="62dp"
+        android:layout_marginEnd="125dp"
+        android:fontFamily="serif"
+        android:text="Escoja un sensor"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <Button
+        android:id="@+id/bttacel"
+        android:layout_width="168dp"
+        android:layout_height="72dp"
+        android:layout_marginTop="71dp"
+        android:layout_marginEnd="25dp"
+        android:fontFamily="serif"
+        android:text="Acelerómetro"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <Button
+        android:id="@+id/btttemp"
+        android:layout_width="168dp"
+        android:layout_height="72dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="31dp"
+        android:fontFamily="serif"
+        android:text="Temperatura"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bttgiro" />
+
+    <Button
+        android:id="@+id/bttpresion"
+        android:layout_width="168dp"
+        android:layout_height="72dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="25dp"
+        android:fontFamily="serif"
+        android:text="Presión"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bttacel" />
+
+    <Button
+        android:id="@+id/bttgiro"
+        android:layout_width="168dp"
+        android:layout_height="72dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="40dp"
+        android:fontFamily="serif"
+        android:text="Giroscopio"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
