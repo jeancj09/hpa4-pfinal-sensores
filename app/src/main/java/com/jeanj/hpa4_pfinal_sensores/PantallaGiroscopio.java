@@ -15,6 +15,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class PantallaGiroscopio extends AppCompatActivity implements SensorEventListener {
 
@@ -36,8 +37,13 @@ public class PantallaGiroscopio extends AppCompatActivity implements SensorEvent
         buttongyro.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(PantallaGiroscopio.this, MainActivity.class);
-
+                Context context = view.getContext();
+                CharSequence text = "Volviendo a pantalla principal, espere... ";
+                int duration = Toast.LENGTH_SHORT;
+                Toast toast = Toast.makeText(context, text, duration);
+                toast.show();
+                Intent intent = new Intent(view.getContext(), MainActivity.class);
+                startActivity(intent);
             }
         });
     }
