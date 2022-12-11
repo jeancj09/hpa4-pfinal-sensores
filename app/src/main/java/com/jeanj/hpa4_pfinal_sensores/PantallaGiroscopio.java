@@ -36,7 +36,7 @@ public class PantallaGiroscopio extends AppCompatActivity implements SensorEvent
         buttongyro.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(this, MainActivity.class);
+                Intent intent = new Intent(PantallaGiroscopio.this, MainActivity.class);
 
             }
         });
