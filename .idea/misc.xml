@@ -4,6 +4,9 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Proyecto Unido/hpa4-pfinal-sensores/app/src/main/res/layout/activity_pantalla_giroscopio.xml" value="0.5" />
+        <entry key="..\:/Users/Zhong/AndroidStudioProjects/hpa4-pfinal-sensores/app/src/main/res/layout/activity_pantalla_acelerometro.xml" value="0.35104166666666664" />
+        <entry key="..\:/Users/Zhong/AndroidStudioProjects/hpa4-pfinal-sensores/app/src/main/res/layout/activity_pantalla_giroscopio.xml" value="0.35104166666666664" />
+        <entry key="..\:/Users/Zhong/AndroidStudioProjects/hpa4-pfinal-sensores/app/src/main/res/layout/activity_pantalla_presion.xml" value="0.33" />
         <entry key="..\:/Users/jeanj/Downloads/hpa4pfinalsensores/app/src/main/res/layout/activity_main.xml" value="0.264" />
         <entry key="..\:/Users/jeanj/Downloads/hpa4pfinalsensores/app/src/main/res/layout/activity_pantalla_giroscopio.xml" value="0.215625" />
         <entry key="..\:/Users/jeanj/Downloads/hpa4pfinalsensores/app/src/main/res/layout/activity_pantalla_presion.xml" value="0.2296875" />
