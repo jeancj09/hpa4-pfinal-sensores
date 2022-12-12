@@ -2,10 +2,8 @@ package com.jeanj.hpa4_pfinal_sensores;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
-import android.content.pm.ActivityInfo;
 import android.graphics.Color;
 import android.hardware.Sensor;
 import android.hardware.SensorEvent;
@@ -22,6 +20,7 @@ public class PantallaGiroscopio extends AppCompatActivity implements SensorEvent
     private SensorManager senSensorManager;
     private Sensor senAccelerometer;
     Button buttongyro;
+    TextView sensor1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,7 +31,7 @@ public class PantallaGiroscopio extends AppCompatActivity implements SensorEvent
         senAccelerometer = senSensorManager.getDefaultSensor(Sensor.TYPE_GYROSCOPE);
         senSensorManager.registerListener(this, senAccelerometer , SensorManager.SENSOR_DELAY_NORMAL);
 
-        buttongyro=findViewById(R.id.buttongyro);
+        buttongyro=findViewById(R.id.btnregresar);
 
         buttongyro.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -70,13 +69,21 @@ public class PantallaGiroscopio extends AppCompatActivity implements SensorEvent
             } else if(sensorEvent.values[0] < -0.5f) { // clockwise
                 getWindow().getDecorView().setBackgroundColor(Color.RED);
             }
-            ((TextView)findViewById(R.id.sensor)).append("X: "+x+ " Y: "+ y+ " Z: "+ z + "\n");
+
+            String txt = "\n\nSensor: ";
+            // Cada sensor puede lanzar un thread que pase por aqui
+            // Para asegurarnos ante los accesos simult‡neos sincronizamos esto
+
+            txt += "Inclinaciones\n";
+            txt += "\nX: " + x+ " Y: "+y+" Z: "+ z+" \n\n";
+
+            sensor1.setText(txt);
 
             contador += 1;
 
             if (contador%40 == 0)
             {
-                ((TextView)findViewById(R.id.sensor)).setText("");
+                sensor1.setText("");
             }
         }
 
