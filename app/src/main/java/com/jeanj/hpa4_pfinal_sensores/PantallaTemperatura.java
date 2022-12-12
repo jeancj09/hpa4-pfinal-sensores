@@ -35,6 +35,8 @@ public class PantallaTemperatura extends AppCompatActivity implements SensorEven
 
         tx1= findViewById(R.id.tx1);
 
+        btnregresar=findViewById(R.id.btnregresar);
+
 
         btnregresar.setOnClickListener(new View.OnClickListener() {
             @Override
