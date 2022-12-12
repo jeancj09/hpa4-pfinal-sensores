@@ -12,6 +12,7 @@ import android.hardware.SensorManager;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -21,6 +22,7 @@ public class PantallaGiroscopio extends AppCompatActivity implements SensorEvent
     private Sensor senAccelerometer;
     Button buttongyro;
     TextView sensor1;
+    ImageView img;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,6 +34,8 @@ public class PantallaGiroscopio extends AppCompatActivity implements SensorEvent
         senSensorManager.registerListener(this, senAccelerometer , SensorManager.SENSOR_DELAY_NORMAL);
 
         buttongyro=findViewById(R.id.btnregresar);
+        img=findViewById(R.id.imageView3);
+        sensor1=findViewById(R.id.tvsensor);
 
         buttongyro.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -74,7 +78,7 @@ public class PantallaGiroscopio extends AppCompatActivity implements SensorEvent
             // Cada sensor puede lanzar un thread que pase por aqui
             // Para asegurarnos ante los accesos simult‡neos sincronizamos esto
 
-            txt += "Inclinaciones\n";
+            txt += "Giroscopio\n";
             txt += "\nX: " + x+ " Y: "+y+" Z: "+ z+" \n\n";
 
             sensor1.setText(txt);
